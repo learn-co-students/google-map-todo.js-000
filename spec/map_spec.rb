@@ -26,7 +26,7 @@ describe "Index" do
   end
 
   it "replaces the spinner with a google map in the #map_canvas div" do
-    sleep(5) 
+    sleep(20) 
     expect { page.find(:xpath, '//a[@title="Click to see this area on Google Maps"]') }.to_not raise_error
     expect(page).to have_selector('.gm-style-mtc', count: 2)
     expect(page.all(".gm-style-mtc")[0].text).to eq("Map")
